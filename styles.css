@@ -140,7 +140,7 @@ footer a:hover
 -----------------------------------*/
 .resume header::before {
     background: url(bg-home-office-studio.jpg) center / cover;
-    background-size: cover;
+    background-size: inherit;
     content:"";
     display: block;
     height: 375px;
