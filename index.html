@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Sameer Kumar | QA, Cloud & Data Analyst Professional</title>
-    <meta name="description" content="Sameer Kumar: 13+ years in Software Testing (Manual & Automation), 3 years Cloud, 2 years Data Analysis; aware of operations & process optimization.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Sameer Kumar: 13+ years in Software Testing (Manual & Automation), 3 years Cloud, 2 years Data Analysis; aware of operations & process optimization."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+      /* simple styling for the view counter */
+      #view-counter {
+        font-size: 0.9rem;
+        color: #666;
+        text-align: right;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body class="home">
     <div class="content-wrapper">
@@ -18,15 +28,22 @@
           <h2>Senior QA Professional | Manual & Automation Testing | Cloud & Data Analyst</h2>
         </header>
 
+        <!-- VIEW COUNTER -->
+        <div id="view-counter">
+          Page views: <span id="viewCount">—</span>
+        </div>
+
         <main>
           <section id="about">
             <h2>About Me</h2>
             <p>
-              I’m <strong>Sameer Kumar</strong>, a detail-oriented QA professional with over <strong>13 years</strong> of hands-on experience: 
-              <strong>9 years</strong> in manual testing, <strong>3 years</strong> in automated testing, 
-              <strong>3 years</strong> in cloud-native testing, and <strong>2 years</strong> as a data analyst. 
-              I’ve driven quality across UI, API, performance, functional, and regression testing, 
-              contributed to process audits and improvements, and partnered with DevOps to deliver robust, secure software solutions.
+              I’m <strong>Sameer Kumar</strong>, a detail-oriented QA professional with over
+              <strong>13 years</strong> of hands-on experience:
+              <strong>9 years</strong> in manual testing, <strong>3 years</strong> in automated
+              testing, <strong>3 years</strong> in cloud-native testing, and
+              <strong>2 years</strong> as a data analyst. I’ve driven quality across UI, API,
+              performance, functional, and regression testing, contributed to process audits and
+              improvements, and partnered with DevOps to deliver robust, secure software solutions.
             </p>
           </section>
 
@@ -44,22 +61,18 @@
           <section id="open-roles">
             <h2>Open Roles & Aspirations</h2>
             <p>
-              I’m actively seeking opportunities in <strong>Software Testing</strong> (Manual & Automation), 
-              <strong>Cloud Quality Assurance</strong>, and <strong>Data Analysis</strong>. 
-              I’m also open to roles in operations and process improvement where I can leverage my cross-functional experience 
-              to achieve measurable impact from day one.
+              I’m actively seeking opportunities in <strong>Software Testing</strong> (Manual & Automation),
+              <strong>Cloud Quality Assurance</strong>, and <strong>Data Analysis</strong>.
+              I’m also open to roles in operations and process improvement where I can leverage my
+              cross-functional experience to achieve measurable impact from day one.
             </p>
           </section>
 
           <section id="education">
             <h2>Education & Certifications</h2>
             <ul>
-              <li><strong>B.Tech, Computer Science</strong><br>
-                  JNTUH College of Engineering, Hyderabad (2010)
-              </li>
-              <li><strong>M.Sc. in AI & ML</strong><br>
-                  Scaler Academy (2023)
-              </li>
+              <li><strong>B.Tech, Computer Science</strong><br/>JNTUH College of Engineering, Hyderabad (2010)</li>
+              <li><strong>M.Sc. in AI & ML</strong><br/>Scaler Academy (2023)</li>
               <li><strong>Certifications:</strong> Six Sigma Green Belt, Agile Foundations, API Testing, JMeter, Postman, SQL for Testers, PMP (pursuing)</li>
             </ul>
           </section>
@@ -81,5 +94,20 @@
         </footer>
       </div>
     </div>
+
+    <script>
+      // replace 'sameer-kumar' and 'homepage' with your own namespace/key if you like
+      const namespace = 'sameer-kumar';
+      const key       = 'homepage';
+
+      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('viewCount').innerText = data.value;
+        })
+        .catch(() => {
+          document.getElementById('viewCount').innerText = 'N/A';
+        });
+    </script>
   </body>
 </html>
